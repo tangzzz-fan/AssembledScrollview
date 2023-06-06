@@ -1,0 +1,16 @@
+PODS:
+  - Anchorage (4.5.0)
+
+DEPENDENCIES:
+  - Anchorage
+
+SPEC REPOS:
+  trunk:
+    - Anchorage
+
+SPEC CHECKSUMS:
+  Anchorage: 1961bc81c84aeed54ad7ffc697c50cd9de748ba6
+
+PODFILE CHECKSUM: 5b20545601b0be2f773a8ae9cb06be6f5f980ba5
+
+COCOAPODS: 1.11.3
