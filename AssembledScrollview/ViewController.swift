@@ -27,10 +27,24 @@ class ViewController: UIViewController {
         return views
     }()
     
+    lazy var testView: UILabel = {
+        let view = UILabel(frame: .zero)
+        view.backgroundColor = .random
+        view.heightAnchor == 100
+        view.text = "这是测试 view"
+        return view
+    }()
+    
+    lazy var testStackView: UIStackView = {
+        let sv = UIStackView(arrangedSubviews: [testView, tagsView])
+        sv.axis = .vertical
+        return sv
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 //        setupTableViews()
-        sectionViews.insert(tagsView, at: 0)
+        sectionViews.insert(testStackView, at: 0)
         tagsView.viewModel.input.updateStyle(["这是测试1", "这是测试1", "这是测试1", "这是测试1", "这是测试1", "这是测试1", "这是测试1", "这是测试1"])
         assemblyScrollView = AssembledScrollview(sectionViews: sectionViews)
         assemblyScrollView.backgroundColor = .systemPink
