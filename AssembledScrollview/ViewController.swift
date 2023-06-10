@@ -13,7 +13,8 @@ class ViewController: UIViewController {
     var assemblyScrollView: AssembledScrollview!
     var containerView = UIView(frame: .zero)
     var tableView = GeneralSectionTableView()
-    
+    var tagsView: GeneralTagsView = GeneralTagsView(GeneralTagsViewModel())
+        
     lazy var sectionViews = {
         var views = [UIView]()
         for i in 0..<20 {
@@ -28,8 +29,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupTableViews()
-        sectionViews.insert(tableView, at: 0)
+//        setupTableViews()
+        sectionViews.insert(tagsView, at: 0)
+        tagsView.viewModel.input.updateStyle(["这是测试1", "这是测试1", "这是测试1", "这是测试1", "这是测试1", "这是测试1", "这是测试1", "这是测试1"])
         assemblyScrollView = AssembledScrollview(sectionViews: sectionViews)
         assemblyScrollView.backgroundColor = .systemPink
         configureLayout()
@@ -41,14 +43,13 @@ class ViewController: UIViewController {
         tableView.rowHeight = 44
         tableView.isScrollEnabled = false
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-//        containerView.addSubview(tableView)
-//        containerView.sizeAnchors == UIScreen.main.bounds.size
-//        tableView.edgeAnchors == containerView.edgeAnchors
     }
 
     func configureLayout() {
         view.addSubview(assemblyScrollView)
-        assemblyScrollView.edgeAnchors == view.edgeAnchors
+        assemblyScrollView.topAnchor == view.topAnchor + 64
+        assemblyScrollView.horizontalAnchors == view.horizontalAnchors
+        assemblyScrollView.bottomAnchor == view.bottomAnchor
     }
 }
 

@@ -7,4 +7,5 @@ target 'AssembledScrollview' do
 
   # Pods for AssembledScrollview
   pod 'Anchorage'
+  pod 'ReactiveSwift'
 end

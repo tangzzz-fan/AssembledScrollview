@@ -19,6 +19,13 @@
 		C494B7262A2F35A400B04A31 /* AssembledScrollview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C494B7252A2F35A400B04A31 /* AssembledScrollview.swift */; };
 		C494B7282A2F360200B04A31 /* GeneralSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C494B7272A2F360200B04A31 /* GeneralSectionView.swift */; };
 		C4E39F3A2A34225B0047F1B5 /* GeneralSectionTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E39F392A34225B0047F1B5 /* GeneralSectionTableView.swift */; };
+		C4E39F402A345FF90047F1B5 /* GeneralTagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E39F3D2A345FF90047F1B5 /* GeneralTagsView.swift */; };
+		C4E39F412A345FF90047F1B5 /* GeneralTagsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E39F3E2A345FF90047F1B5 /* GeneralTagsViewModel.swift */; };
+		C4E39F422A345FF90047F1B5 /* GeneralTagsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E39F3F2A345FF90047F1B5 /* GeneralTagsCollectionViewCell.swift */; };
+		C4E39F442A3471060047F1B5 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E39F432A3471060047F1B5 /* String+Extensions.swift */; };
+		C4E39F462A3471BF0047F1B5 /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E39F452A3471BF0047F1B5 /* UICollectionView+Extensions.swift */; };
+		C4E39F492A3474E70047F1B5 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E39F482A3474E70047F1B5 /* UITableView+Extensions.swift */; };
+		C4E39F4B2A3475470047F1B5 /* GeneralSectionCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E39F4A2A3475470047F1B5 /* GeneralSectionCollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +43,13 @@
 		C494B7252A2F35A400B04A31 /* AssembledScrollview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssembledScrollview.swift; sourceTree = "<group>"; };
 		C494B7272A2F360200B04A31 /* GeneralSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSectionView.swift; sourceTree = "<group>"; };
 		C4E39F392A34225B0047F1B5 /* GeneralSectionTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSectionTableView.swift; sourceTree = "<group>"; };
+		C4E39F3D2A345FF90047F1B5 /* GeneralTagsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralTagsView.swift; sourceTree = "<group>"; };
+		C4E39F3E2A345FF90047F1B5 /* GeneralTagsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralTagsViewModel.swift; sourceTree = "<group>"; };
+		C4E39F3F2A345FF90047F1B5 /* GeneralTagsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralTagsCollectionViewCell.swift; sourceTree = "<group>"; };
+		C4E39F432A3471060047F1B5 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		C4E39F452A3471BF0047F1B5 /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
+		C4E39F482A3474E70047F1B5 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		C4E39F4A2A3475470047F1B5 /* GeneralSectionCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSectionCollectionView.swift; sourceTree = "<group>"; };
 		C6ED5F83F0E9DF40450C1492 /* Pods_AssembledScrollview.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AssembledScrollview.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3C15F7A9E8D62A449AC48D9 /* Pods-AssembledScrollview.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AssembledScrollview.release.xcconfig"; path = "Target Support Files/Pods-AssembledScrollview/Pods-AssembledScrollview.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,9 +108,13 @@
 				C494B7132A2F325D00B04A31 /* SceneDelegate.swift */,
 				C494B7152A2F325D00B04A31 /* ViewController.swift */,
 				C4E39F392A34225B0047F1B5 /* GeneralSectionTableView.swift */,
-				C44A04962A2F7F90002DE75F /* UIColor+Extensions.swift */,
+				C4E39F4A2A3475470047F1B5 /* GeneralSectionCollectionView.swift */,
 				C494B7252A2F35A400B04A31 /* AssembledScrollview.swift */,
 				C494B7272A2F360200B04A31 /* GeneralSectionView.swift */,
+				C4E39F472A3471E90047F1B5 /* Extensions */,
+				C4E39F3F2A345FF90047F1B5 /* GeneralTagsCollectionViewCell.swift */,
+				C4E39F3D2A345FF90047F1B5 /* GeneralTagsView.swift */,
+				C4E39F3E2A345FF90047F1B5 /* GeneralTagsViewModel.swift */,
 				C44A04982A2F7FC7002DE75F /* TestView.swift */,
 				C494B7172A2F325D00B04A31 /* Main.storyboard */,
 				C494B71A2A2F325F00B04A31 /* Assets.xcassets */,
@@ -104,6 +122,17 @@
 				C494B71F2A2F325F00B04A31 /* Info.plist */,
 			);
 			path = AssembledScrollview;
+			sourceTree = "<group>";
+		};
+		C4E39F472A3471E90047F1B5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C44A04962A2F7F90002DE75F /* UIColor+Extensions.swift */,
+				C4E39F432A3471060047F1B5 /* String+Extensions.swift */,
+				C4E39F452A3471BF0047F1B5 /* UICollectionView+Extensions.swift */,
+				C4E39F482A3474E70047F1B5 /* UITableView+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,11 +251,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				C44A04992A2F7FC7002DE75F /* TestView.swift in Sources */,
+				C4E39F492A3474E70047F1B5 /* UITableView+Extensions.swift in Sources */,
 				C494B7162A2F325D00B04A31 /* ViewController.swift in Sources */,
 				C44A04972A2F7F90002DE75F /* UIColor+Extensions.swift in Sources */,
 				C494B7122A2F325D00B04A31 /* AppDelegate.swift in Sources */,
+				C4E39F4B2A3475470047F1B5 /* GeneralSectionCollectionView.swift in Sources */,
+				C4E39F442A3471060047F1B5 /* String+Extensions.swift in Sources */,
+				C4E39F402A345FF90047F1B5 /* GeneralTagsView.swift in Sources */,
 				C494B7262A2F35A400B04A31 /* AssembledScrollview.swift in Sources */,
+				C4E39F412A345FF90047F1B5 /* GeneralTagsViewModel.swift in Sources */,
 				C494B7142A2F325D00B04A31 /* SceneDelegate.swift in Sources */,
+				C4E39F422A345FF90047F1B5 /* GeneralTagsCollectionViewCell.swift in Sources */,
+				C4E39F462A3471BF0047F1B5 /* UICollectionView+Extensions.swift in Sources */,
 				C4E39F3A2A34225B0047F1B5 /* GeneralSectionTableView.swift in Sources */,
 				C494B7282A2F360200B04A31 /* GeneralSectionView.swift in Sources */,
 			);
