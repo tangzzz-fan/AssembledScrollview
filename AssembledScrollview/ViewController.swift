@@ -11,6 +11,8 @@ import Anchorage
 class ViewController: UIViewController {
 
     var assemblyScrollView: AssembledScrollview!
+    var containerView = UIView(frame: .zero)
+    var tableView = GeneralSectionTableView()
     
     lazy var sectionViews = {
         var views = [UIView]()
@@ -26,14 +28,47 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTableViews()
+        sectionViews.insert(tableView, at: 0)
         assemblyScrollView = AssembledScrollview(sectionViews: sectionViews)
         assemblyScrollView.backgroundColor = .systemPink
         configureLayout()
+    }
+    
+    private func setupTableViews() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.rowHeight = 44
+        tableView.isScrollEnabled = false
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+//        containerView.addSubview(tableView)
+//        containerView.sizeAnchors == UIScreen.main.bounds.size
+//        tableView.edgeAnchors == containerView.edgeAnchors
     }
 
     func configureLayout() {
         view.addSubview(assemblyScrollView)
         assemblyScrollView.edgeAnchors == view.edgeAnchors
+    }
+}
+
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 30
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+        cell?.backgroundColor = .random
+        return cell!
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
     }
 }
 
