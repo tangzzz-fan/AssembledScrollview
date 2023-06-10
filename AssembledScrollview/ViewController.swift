@@ -36,14 +36,14 @@ class ViewController: UIViewController {
     }()
     
     lazy var testStackView: UIStackView = {
-        let sv = UIStackView(arrangedSubviews: [testView, tagsView])
+        let sv = UIStackView(arrangedSubviews: [testView, tagsView, tableView])
         sv.axis = .vertical
         return sv
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        setupTableViews()
+        setupTableViews()
         sectionViews.insert(testStackView, at: 0)
         tagsView.viewModel.input.updateStyle(["这是测试1", "这是测试1", "这是测试1", "这是测试1", "这是测试1", "这是测试1", "这是测试1", "这是测试1"])
         assemblyScrollView = AssembledScrollview(sectionViews: sectionViews)
