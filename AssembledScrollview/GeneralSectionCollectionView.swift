@@ -8,18 +8,27 @@
 import UIKit
 
 class GeneralSectionCollectionView: UICollectionView {
-    private let lineSpacing: CGFloat = 8
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        if bounds.size != intrinsicContentSize {
+    override public var contentSize: CGSize {
+        didSet {
+            guard !contentSize.equalTo(oldValue) else {
+                return
+            }
+            
             invalidateIntrinsicContentSize()
+            setNeedsLayout()
+            
+            visibleCells.forEach { cell in
+                UIView.performWithoutAnimation {
+                    cell.layoutIfNeeded()
+                }
+            }
         }
     }
-
+    
     override var intrinsicContentSize: CGSize {
-        return CGSize(width: self.contentSize.width,
-                      height: self.contentSize.height)
+        return CGSize(width: contentSize.width,
+                      height: contentSize.height)
     }
 }
 
