@@ -22,10 +22,16 @@ class ViewController: UIViewController {
             view.backgroundColor = .random
             view.heightAnchor == 200
             view.widthAnchor == UIScreen.main.bounds.width
+            view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapAction(_:))))
             views.append(view)
         }
         return views
     }()
+    
+    @objc
+    private func tapAction(_ sender: UIView) {
+        print("tapAction")
+    }
     
     lazy var testView: UILabel = {
         let view = UILabel(frame: .zero)
@@ -79,7 +85,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        print("select: \(indexPath.row)")
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
