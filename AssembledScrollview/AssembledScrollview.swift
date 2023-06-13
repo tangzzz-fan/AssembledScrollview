@@ -42,7 +42,6 @@ class AssembledScrollview: UIView {
     
     private func setupViewStyle() {
         backgroundColor = .white
-        scrollContentView.backgroundColor = .clear
         clipsToBounds = true
     }
     
@@ -60,6 +59,8 @@ class AssembledScrollview: UIView {
             if let view = mostTopView {
                 view.bottomAnchor == sectionView.topAnchor
             }
+            sectionView.leftAnchor == scrollContentView.leftAnchor
+            sectionView.trailingAnchor == scrollContentView.trailingAnchor
             sectionView.widthAnchor == scrollView.widthAnchor
             mostTopView = sectionView
         }

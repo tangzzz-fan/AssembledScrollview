@@ -26,7 +26,6 @@
 		C4E39F462A3471BF0047F1B5 /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E39F452A3471BF0047F1B5 /* UICollectionView+Extensions.swift */; };
 		C4E39F492A3474E70047F1B5 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E39F482A3474E70047F1B5 /* UITableView+Extensions.swift */; };
 		C4E39F4B2A3475470047F1B5 /* GeneralSectionCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E39F4A2A3475470047F1B5 /* GeneralSectionCollectionView.swift */; };
-		C4E39F512A3818390047F1B5 /* CustomScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E39F502A3818390047F1B5 /* CustomScrollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,7 +50,6 @@
 		C4E39F452A3471BF0047F1B5 /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
 		C4E39F482A3474E70047F1B5 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		C4E39F4A2A3475470047F1B5 /* GeneralSectionCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSectionCollectionView.swift; sourceTree = "<group>"; };
-		C4E39F502A3818390047F1B5 /* CustomScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomScrollView.swift; sourceTree = "<group>"; };
 		C6ED5F83F0E9DF40450C1492 /* Pods_AssembledScrollview.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AssembledScrollview.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3C15F7A9E8D62A449AC48D9 /* Pods-AssembledScrollview.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AssembledScrollview.release.xcconfig"; path = "Target Support Files/Pods-AssembledScrollview/Pods-AssembledScrollview.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,7 +110,6 @@
 				C4E39F392A34225B0047F1B5 /* GeneralSectionTableView.swift */,
 				C4E39F4A2A3475470047F1B5 /* GeneralSectionCollectionView.swift */,
 				C494B7252A2F35A400B04A31 /* AssembledScrollview.swift */,
-				C4E39F502A3818390047F1B5 /* CustomScrollView.swift */,
 				C494B7272A2F360200B04A31 /* GeneralSectionView.swift */,
 				C4E39F472A3471E90047F1B5 /* Extensions */,
 				C4E39F3F2A345FF90047F1B5 /* GeneralTagsCollectionViewCell.swift */,
@@ -259,7 +256,6 @@
 				C44A04972A2F7F90002DE75F /* UIColor+Extensions.swift in Sources */,
 				C494B7122A2F325D00B04A31 /* AppDelegate.swift in Sources */,
 				C4E39F4B2A3475470047F1B5 /* GeneralSectionCollectionView.swift in Sources */,
-				C4E39F512A3818390047F1B5 /* CustomScrollView.swift in Sources */,
 				C4E39F442A3471060047F1B5 /* String+Extensions.swift in Sources */,
 				C4E39F402A345FF90047F1B5 /* GeneralTagsView.swift in Sources */,
 				C494B7262A2F35A400B04A31 /* AssembledScrollview.swift in Sources */,

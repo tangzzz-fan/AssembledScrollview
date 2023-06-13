@@ -15,6 +15,13 @@ class ViewController: UIViewController {
     var tableView = GeneralSectionTableView()
     var tagsView: GeneralTagsView = GeneralTagsView(GeneralTagsViewModel())
         
+    func genenateBtn() -> UIButton {
+        let button = UIButton()
+        button.backgroundColor = .random
+        button.addTarget(self, action: #selector(tapAction(_:)), for: .touchUpInside)
+        return button
+    }
+    
     lazy var sectionViews = {
         var views = [UIView]()
         for i in 0..<20 {
@@ -22,14 +29,16 @@ class ViewController: UIViewController {
             view.backgroundColor = .random
             view.heightAnchor == 200
             view.widthAnchor == UIScreen.main.bounds.width
-            view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapAction(_:))))
+            let btn = genenateBtn()
+            view.addSubview(btn)
+            btn.edgeAnchors == view.edgeAnchors + 20
             views.append(view)
         }
         return views
     }()
     
     @objc
-    private func tapAction(_ sender: UIView) {
+    private func tapAction(_ sender: UIButton) {
         print("tapAction")
     }
     
@@ -69,7 +78,15 @@ class ViewController: UIViewController {
         view.addSubview(assemblyScrollView)
         assemblyScrollView.topAnchor == view.topAnchor + 64
         assemblyScrollView.horizontalAnchors == view.horizontalAnchors
-        assemblyScrollView.bottomAnchor == view.bottomAnchor
+        assemblyScrollView.bottomAnchor == view.bottomAnchor - 120
+        
+        let btn = genenateBtn()
+        view.addSubview(btn)
+        btn.heightAnchor == 100
+        btn.topAnchor == assemblyScrollView.bottomAnchor
+        btn.leadingAnchor == assemblyScrollView.leadingAnchor + 20
+        btn.trailingAnchor == assemblyScrollView.trailingAnchor - 20
+        btn.bottomAnchor == view.bottomAnchor - 44
     }
 }
 
@@ -81,6 +98,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
         cell?.backgroundColor = .random
+        cell?.selectionStyle = .none
         return cell!
     }
     
